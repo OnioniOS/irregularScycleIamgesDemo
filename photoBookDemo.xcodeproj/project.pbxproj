@@ -13,14 +13,8 @@
 		581D5BFD2091828400DCE533 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 581D5BFB2091828400DCE533 /* LaunchScreen.storyboard */; };
 		581D5C002091828400DCE533 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 581D5BFF2091828400DCE533 /* main.m */; };
 		581D5C082091829A00DCE533 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 581D5C062091829900DCE533 /* ViewController.m */; };
-		581D5C0F209182A300DCE533 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 581D5C09209182A200DCE533 /* 4.png */; };
-		581D5C10209182A300DCE533 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 581D5C0A209182A200DCE533 /* 6.png */; };
-		581D5C11209182A300DCE533 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 581D5C0B209182A200DCE533 /* 2.png */; };
-		581D5C12209182A300DCE533 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 581D5C0C209182A200DCE533 /* 1.png */; };
-		581D5C13209182A300DCE533 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 581D5C0D209182A200DCE533 /* 5.png */; };
-		581D5C14209182A300DCE533 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 581D5C0E209182A200DCE533 /* 3.png */; };
 		58DB0D5F2092BD7A00209669 /* ZJYRoadBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DB0D5D2092BD7900209669 /* ZJYRoadBtn.m */; };
-		58DB0D632092C6EF00209669 /* ZJYRoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DB0D622092C6EE00209669 /* ZJYRoadView.m */; };
+		58DB0D662093246000209669 /* ZJYRoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DB0D652093246000209669 /* ZJYRoadView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,16 +28,10 @@
 		581D5BFF2091828400DCE533 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		581D5C062091829900DCE533 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		581D5C072091829900DCE533 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		581D5C09209182A200DCE533 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
-		581D5C0A209182A200DCE533 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
-		581D5C0B209182A200DCE533 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
-		581D5C0C209182A200DCE533 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		581D5C0D209182A200DCE533 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
-		581D5C0E209182A200DCE533 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		58DB0D5B2092BD7900209669 /* ZJYRoadBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJYRoadBtn.h; sourceTree = "<group>"; };
 		58DB0D5D2092BD7900209669 /* ZJYRoadBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJYRoadBtn.m; sourceTree = "<group>"; };
-		58DB0D612092C6EE00209669 /* ZJYRoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJYRoadView.h; sourceTree = "<group>"; };
-		58DB0D622092C6EE00209669 /* ZJYRoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJYRoadView.m; sourceTree = "<group>"; };
+		58DB0D642093246000209669 /* ZJYRoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJYRoadView.h; sourceTree = "<group>"; };
+		58DB0D652093246000209669 /* ZJYRoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJYRoadView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,14 +70,8 @@
 				581D5C062091829900DCE533 /* ViewController.m */,
 				58DB0D5B2092BD7900209669 /* ZJYRoadBtn.h */,
 				58DB0D5D2092BD7900209669 /* ZJYRoadBtn.m */,
-				58DB0D612092C6EE00209669 /* ZJYRoadView.h */,
-				58DB0D622092C6EE00209669 /* ZJYRoadView.m */,
-				581D5C0C209182A200DCE533 /* 1.png */,
-				581D5C0B209182A200DCE533 /* 2.png */,
-				581D5C0E209182A200DCE533 /* 3.png */,
-				581D5C09209182A200DCE533 /* 4.png */,
-				581D5C0D209182A200DCE533 /* 5.png */,
-				581D5C0A209182A200DCE533 /* 6.png */,
+				58DB0D642093246000209669 /* ZJYRoadView.h */,
+				58DB0D652093246000209669 /* ZJYRoadView.m */,
 				581D5BF62091828400DCE533 /* Main.storyboard */,
 				581D5BF92091828400DCE533 /* Assets.xcassets */,
 				581D5BFB2091828400DCE533 /* LaunchScreen.storyboard */,
@@ -156,15 +138,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				581D5C11209182A300DCE533 /* 2.png in Resources */,
-				581D5C0F209182A300DCE533 /* 4.png in Resources */,
 				581D5BFD2091828400DCE533 /* LaunchScreen.storyboard in Resources */,
-				581D5C14209182A300DCE533 /* 3.png in Resources */,
 				581D5BFA2091828400DCE533 /* Assets.xcassets in Resources */,
 				581D5BF82091828400DCE533 /* Main.storyboard in Resources */,
-				581D5C13209182A300DCE533 /* 5.png in Resources */,
-				581D5C10209182A300DCE533 /* 6.png in Resources */,
-				581D5C12209182A300DCE533 /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +154,7 @@
 				581D5C082091829A00DCE533 /* ViewController.m in Sources */,
 				581D5C002091828400DCE533 /* main.m in Sources */,
 				58DB0D5F2092BD7A00209669 /* ZJYRoadBtn.m in Sources */,
-				58DB0D632092C6EF00209669 /* ZJYRoadView.m in Sources */,
+				58DB0D662093246000209669 /* ZJYRoadView.m in Sources */,
 				581D5BF22091828400DCE533 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,7 +302,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhijiayou.ZJYIosMobile;
+				PRODUCT_BUNDLE_IDENTIFIER = photo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -343,7 +319,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhijiayou.ZJYIosMobile;
+				PRODUCT_BUNDLE_IDENTIFIER = photo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
