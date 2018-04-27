@@ -2,4 +2,6 @@
 
 一共4个Button重复使用,可添加无限张图片
 
+解决由于FDFullscreenPopGesture返回引起的问题
+
 ![image](https://github.com/OnioniOS/Images/blob/master/1.gif)
