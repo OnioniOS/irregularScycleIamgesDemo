@@ -75,13 +75,14 @@
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[2] integerValue]]).layer.shadowOffset = CGSizeMake(4, 4);
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[2] integerValue]]).layer.shadowOpacity = 0.5;
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[3] integerValue]]).frame = CGRectMake(WIDTH - (WIDTH-ViewWidth-LeftMargin-ViewMargin), HEIGHT/2-ViewSmallHeight/2, (WIDTH-ViewWidth-LeftMargin-ViewMargin)*2, ViewSmallHeight);
-        ((ZJYRoadBtn *)[self viewWithTag:[self.array[3] integerValue]]).btnIndex = self.leftCount + 1;
     } completion:^(BOOL finished) {
         if (self.leftCount+2 <= self.imageArray.count-1) {
             [((ZJYRoadBtn *)[self viewWithTag:[self.array[0] integerValue]]) roadBtn_setImage:[UIImage imageNamed:self.imageArray[self.leftCount+2]]];
         }else {
             [((ZJYRoadBtn *)[self viewWithTag:[self.array[0] integerValue]]) roadBtn_setImage:[UIImage imageNamed:@""]];
         }
+        ((ZJYRoadBtn *)[self viewWithTag:[self.array[2] integerValue]]).btnIndex = self.leftCount;
+        ((ZJYRoadBtn *)[self viewWithTag:[self.array[3] integerValue]]).btnIndex = self.leftCount + 1;
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[1] integerValue]]).layer.shadowOpacity = 0;
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[0] integerValue]]).alpha = 1;
         [self.array insertObject:[self.array firstObject] atIndex:4];
@@ -103,7 +104,6 @@
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[0] integerValue]]).alpha = 1;
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[0] integerValue]]).layer.shadowOpacity = 0.5;
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[1] integerValue]]).frame = CGRectMake(WIDTH - (WIDTH-ViewWidth-LeftMargin-ViewMargin), HEIGHT/2-ViewSmallHeight/2, (WIDTH-ViewWidth-LeftMargin-ViewMargin)*2, ViewSmallHeight);
-        ((ZJYRoadBtn *)[self viewWithTag:[self.array[1] integerValue]]).btnIndex = self.leftCount + 1;
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[1] integerValue]]).layer.shadowOpacity = 0;
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[2] integerValue]]).frame = CGRectMake(WIDTH + (WIDTH-ViewWidth-LeftMargin-ViewMargin) + ViewMargin,  HEIGHT/2-ViewSmallHeight/2, (WIDTH-ViewWidth-LeftMargin-ViewMargin)*2, ViewSmallHeight);
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[3] integerValue]]).frame = CGRectMake(LeftMargin, HEIGHT/2-ViewHeight/2, ViewWidth, ViewHeight);
@@ -113,6 +113,8 @@
         }else {
             [((ZJYRoadBtn *)[self viewWithTag:[self.array[3] integerValue]]) roadBtn_setImage:[UIImage imageNamed:@""]];
         }
+        ((ZJYRoadBtn *)[self viewWithTag:[self.array[1] integerValue]]).btnIndex = self.leftCount + 1;
+        ((ZJYRoadBtn *)[self viewWithTag:[self.array[0] integerValue]]).btnIndex = self.leftCount;
         [self.array insertObject:[self.array lastObject] atIndex:0];
         [self.array removeObjectAtIndex:4];
         self.isAnimating = NO;
@@ -166,6 +168,7 @@
     [btn addTarget:self action:@selector(handleBtnAction:) forControlEvents:UIControlEventTouchUpInside];
 }
 - (void)handleBtnAction:(ZJYRoadBtn *)sender {
+    NSLog(@"----%ld, %ld", sender.btnIndex, self.leftCount);
     if (sender.btnIndex == self.leftCount) {
         if (self.didClickBtnBlock) {
             self.didClickBtnBlock(self.leftCount);
@@ -174,4 +177,7 @@
         [self leftAction];
     }
 }
+
+
+
 @end
