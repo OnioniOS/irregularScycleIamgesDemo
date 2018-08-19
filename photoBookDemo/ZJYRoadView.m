@@ -61,7 +61,7 @@
     [self bringSubviewToFront:((ZJYRoadBtn *)[self viewWithTag:[self.array[2] integerValue]])];
     [UIView animateWithDuration:AnimationDuration animations:^{
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[0] integerValue]]).frame = CGRectMake(WIDTH + (WIDTH-ViewWidth-LeftMargin-ViewMargin) + ViewMargin,  HEIGHT/2-ViewSmallHeight/2, (WIDTH-ViewWidth-LeftMargin-ViewMargin)*2, ViewSmallHeight);
-        ((ZJYRoadBtn *)[self viewWithTag:[self.array[1] integerValue]]).alpha = 0;
+        ((ZJYRoadBtn *)[self viewWithTag:[self.array[1] integerValue]]).frame = CGRectMake(20, HEIGHT/2-ViewSmallHeight/2, (WIDTH-ViewWidth-LeftMargin-ViewMargin)*2, ViewSmallHeight);
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[2] integerValue]]).frame = CGRectMake(LeftMargin, HEIGHT/2-ViewHeight/2, ViewWidth, ViewHeight);
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[2] integerValue]]).layer.shadowColor = [UIColor blackColor].CGColor;
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[2] integerValue]]).layer.shadowOffset = CGSizeMake(7, 15);
@@ -93,20 +93,25 @@
     }
     self.leftCount--;
     self.isAnimating = YES;
-    ((ZJYRoadBtn *)[self viewWithTag:[self.array[3] integerValue]]).alpha = 0;
+    [self bringSubviewToFront:((ZJYRoadBtn *)[self viewWithTag:[self.array[0] integerValue]])];
+    [self bringSubviewToFront:((ZJYRoadBtn *)[self viewWithTag:[self.array[1] integerValue]])];
+    [((ZJYRoadBtn *)[self viewWithTag:[self.array[0] integerValue]]) roadBtn_setImage:[UIImage imageNamed:self.imageArray[self.leftCount]]];
+    if (self.leftCount) {
+        [((ZJYRoadBtn *)[self viewWithTag:[self.array[3] integerValue]]) roadBtn_setImage:[UIImage imageNamed:self.imageArray[self.leftCount-1]]];
+    }else {
+        ((ZJYRoadBtn *)[self viewWithTag:[self.array[3] integerValue]]).alpha = 0;
+    }
     [UIView animateWithDuration:AnimationDuration animations:^{
-        ((ZJYRoadBtn *)[self viewWithTag:[self.array[0] integerValue]]).alpha = 1;
+        ((ZJYRoadBtn *)[self viewWithTag:[self.array[0] integerValue]]).frame = CGRectMake(LeftMargin, HEIGHT/2-ViewHeight/2, ViewWidth, ViewHeight);
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[0] integerValue]]).layer.shadowOpacity = 0.5;
-        ((ZJYRoadBtn *)[self viewWithTag:[self.array[1] integerValue]]).frame = CGRectMake(WIDTH - (WIDTH-ViewWidth-LeftMargin-ViewMargin), HEIGHT/2-ViewSmallHeight/2, (WIDTH-ViewWidth-LeftMargin-ViewMargin)*2, ViewSmallHeight);
+        ((ZJYRoadBtn *)[self viewWithTag:[self.array[0] integerValue]]).layer.shadowColor = [UIColor blackColor].CGColor;
+        ((ZJYRoadBtn *)[self viewWithTag:[self.array[0] integerValue]]).layer.shadowOffset = CGSizeMake(7, 15);
+        ((ZJYRoadBtn *)[self viewWithTag:[self.array[0] integerValue]]).layer.shadowRadius = 7;
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[1] integerValue]]).layer.shadowOpacity = 0;
+        ((ZJYRoadBtn *)[self viewWithTag:[self.array[1] integerValue]]).frame = CGRectMake(WIDTH - (WIDTH-ViewWidth-LeftMargin-ViewMargin), HEIGHT/2-ViewSmallHeight/2, (WIDTH-ViewWidth-LeftMargin-ViewMargin)*2, ViewSmallHeight);
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[2] integerValue]]).frame = CGRectMake(WIDTH + (WIDTH-ViewWidth-LeftMargin-ViewMargin) + ViewMargin,  HEIGHT/2-ViewSmallHeight/2, (WIDTH-ViewWidth-LeftMargin-ViewMargin)*2, ViewSmallHeight);
-        ((ZJYRoadBtn *)[self viewWithTag:[self.array[3] integerValue]]).frame = CGRectMake(LeftMargin, HEIGHT/2-ViewHeight/2, ViewWidth, ViewHeight);
+        ((ZJYRoadBtn *)[self viewWithTag:[self.array[3] integerValue]]).frame = CGRectMake(20, HEIGHT/2-ViewSmallHeight/2, (WIDTH-ViewWidth-LeftMargin-ViewMargin)*2, ViewSmallHeight);
     } completion:^(BOOL finished) {
-        if (self.leftCount - 1 >= 0) {
-            [((ZJYRoadBtn *)[self viewWithTag:[self.array[3] integerValue]]) roadBtn_setImage:[UIImage imageNamed:self.imageArray[self.leftCount - 1]]];
-        }else {
-            [((ZJYRoadBtn *)[self viewWithTag:[self.array[3] integerValue]]) roadBtn_setImage:[UIImage imageNamed:@""]];
-        }
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[1] integerValue]]).btnIndex = self.leftCount + 1;
         ((ZJYRoadBtn *)[self viewWithTag:[self.array[0] integerValue]]).btnIndex = self.leftCount;
         [self.array insertObject:[self.array lastObject] atIndex:0];
