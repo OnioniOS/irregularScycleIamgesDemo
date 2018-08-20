@@ -37,7 +37,7 @@
         [self addSubview:self.view1];
         [self addSubview:self.view2];
         [self addSubview:self.view3];
-        self.imageArray = [@[@"1I", @"2I", @"3I", @"4I", @"5I", @"6I", @"7I", @"8I", @"9I", @"10I"] mutableCopy];
+        self.imageArray = [@[@"1I", @"2I", @"3I", @"4I", @"5I", @"6I"] mutableCopy];
         [self.view1 roadBtn_setImage:[UIImage imageNamed:self.imageArray[0]]];
         [self.view2 roadBtn_setImage:[UIImage imageNamed:self.imageArray[1]]];
         [self.view3 roadBtn_setImage:[UIImage imageNamed:self.imageArray[2]]];
