@@ -4,4 +4,4 @@
 
 解决由于FDFullscreenPopGesture返回引起的问题
 
-![image](https://github.com/OnioniOS/Images/blob/master/1)
+![image](https://github.com/OnioniOS/Images/blob/master/1.gif)
